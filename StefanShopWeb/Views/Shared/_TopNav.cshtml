@@ -1,0 +1,11 @@
+﻿@model StefanShopWeb.ViewModels.TopMenuViewModel
+
+@foreach (var item in Model.Items)
+{
+    var cls = "";
+    if (item.Active)
+    {
+        cls = "active";
+    }
+    <li class="@cls"><a href="@item.Url">@item.Title</a></li>
+}

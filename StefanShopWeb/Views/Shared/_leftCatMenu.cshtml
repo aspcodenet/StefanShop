@@ -1,0 +1,19 @@
+﻿@model StefanShopWeb.ViewModels.CategoryMenuViewModel
+
+
+<!-- Categories Menu -->
+
+<div class="cat_menu_container">
+    <div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
+        <div class="cat_burger"><span></span><span></span><span></span></div>
+        <div class="cat_menu_text">Kategorier</div>
+    </div>
+
+    <ul class="cat_menu">
+        @foreach (var cat in Model.CategoryMenuItems)
+        {
+            <li><a href="@Url.Action("View","Category",new { id = cat.Id})">@cat.Name <i class="fas fa-chevron-right"></i></a></li>
+        }
+    </ul>
+</div>
+
